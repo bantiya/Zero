@@ -1,7 +1,9 @@
 import * as React from "react";
 import TopNavigation from "@cloudscape-design/components/top-navigation";
 
-const TopNav = () => {
+const TopNav = ({setPage}) => {
+
+
   return (
     <TopNavigation
       identity={{
@@ -11,8 +13,16 @@ const TopNav = () => {
       utilities={[
         {
           type: "button",
+          text: "Home",
+          // href: "https://example.com/",
+          onClick: () => setPage("home"),
+          externalIconAriaLabel: " (opens in a new tab)",
+        },
+        {
+          type: "button",
           text: "Cart",
-          href: "https://example.com/",
+          // href: "https://example.com/",
+          onClick: () => setPage("cart"),
           externalIconAriaLabel: " (opens in a new tab)",
         },
         {
